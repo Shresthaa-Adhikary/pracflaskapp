@@ -11,6 +11,6 @@ jobs:
       - name: docker build
         run: docker build -t y2 .
       - name: docker run
-        run: docker run -d -p 2005:2000 y2 flask run --host=0.0.0.0 --port=2000
+        run: docker run -d -p 2006:2000 y2 
       - name: docker ps
         run: docker ps
