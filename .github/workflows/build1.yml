@@ -12,3 +12,5 @@ jobs:
         run: docker build -t y2 .
       - name: docker run
         run: docker run -d -p 2005:2000 y2 python3 app.py
+      - name: docker ps
+        run: docker ps
