@@ -1,0 +1,14 @@
+name: clone and run flask app
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: docker build
+        run: docker build -t y2 .
+      - name: docker run
+        run: docker run -d -p 2005:2000 y2
